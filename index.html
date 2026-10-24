@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Synthesis of Aspirin — Salicylic Acid + Acetic Anhydride</title>
   <meta name="description" content="An interactive, fact-checked walkthrough of the synthesis of aspirin (acetylsalicylic acid) from salicylic acid and acetic anhydride, based on the Olmsted 1998 general-chemistry experiment: real 3D structures, the esterification mechanism, the two-step procedure, and a live yield calculator." />
-  <link rel="icon" href="brand/orgolabs-icon.svg" type="image/svg+xml" />
+  <link rel="icon" href="https://orgolabs.github.io/shared/brand/orgolabs-icon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://orgolabs.github.io/shared/styles.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -15,7 +15,7 @@
   <div class="brandbar">
     <div class="wrap">
       <a class="brand" href="https://github.com/orgolabs" target="_blank" rel="noopener">
-        <img src="brand/orgolabs-icon.svg" alt="" width="28" height="28" />
+        <img src="https://orgolabs.github.io/shared/brand/orgolabs-icon.svg" alt="" width="28" height="28" />
         <span class="brand-name"><b>orgo</b>labs</span>
       </a>
       <span class="brand-sep">/</span>
@@ -109,21 +109,25 @@
       <div class="viewer-grid grid-4">
         <figure class="viewer-card">
           <figcaption><span class="tag tag-start">Starting material</span><b>Oil of wintergreen</b></figcaption>
+          <p class="mol-sci">methyl 2-hydroxybenzoate</p>
           <div class="viewer" id="view-wintergreen"></div>
           <p class="viewer-note">Methyl salicylate — the natural ester. Hydrolyzed in step 1.</p>
         </figure>
         <figure class="viewer-card">
           <figcaption><span class="tag tag-start">Intermediate</span><b>Salicylic acid</b></figcaption>
+          <p class="mol-sci">2-hydroxybenzoic acid</p>
           <div class="viewer" id="view-salicylic_acid"></div>
           <p class="viewer-note">Has a phenol –OH (and a –CO₂H). The phenol is what gets acetylated.</p>
         </figure>
         <figure class="viewer-card">
           <figcaption><span class="tag tag-start">Reagent</span><b>Acetic anhydride</b></figcaption>
+          <p class="mol-sci">ethanoic anhydride</p>
           <div class="viewer" id="view-acetic_anhydride"></div>
           <p class="viewer-note">The acetyl (CH₃CO–) donor; far more reactive than acetic acid.</p>
         </figure>
         <figure class="viewer-card">
           <figcaption><span class="tag tag-major">Product</span><b>Aspirin</b></figcaption>
+          <p class="mol-sci">2-acetyloxybenzoic acid</p>
           <div class="viewer" id="view-aspirin"></div>
           <p class="viewer-note"><b>Acetylsalicylic acid.</b> The phenol –OH is now an ester (two C=O groups).</p>
         </figure>
@@ -140,6 +144,34 @@
         The aspirin-forming step is a <strong>nucleophilic acyl substitution</strong> (an esterification): the
         phenol oxygen of salicylic acid attacks a carbonyl carbon of acetic anhydride, and acetate leaves.
       </p>
+
+      <h3 class="proc-head">Reaction pathway (two steps)</h3>
+      <div class="scheme">
+        <svg viewBox="0 0 710 150" role="img" aria-label="Two-step aspirin pathway: oil of wintergreen is hydrolysed to salicylic acid, which is then acetylated to aspirin plus acetic acid.">
+          <defs>
+            <marker id="ah" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+              <path class="sv-arrowhead" d="M0,0 L7,3 L0,6 Z"/>
+            </marker>
+          </defs>
+          <rect class="sv-box" x="8" y="46" width="184" height="58" rx="10"/>
+          <text class="sv-name" x="100" y="72" text-anchor="middle" font-size="14">Oil of wintergreen</text>
+          <text class="sv-sub"  x="100" y="90" text-anchor="middle" font-size="10">methyl 2-hydroxybenzoate</text>
+          <line class="sv-arrow" x1="196" y1="75" x2="252" y2="75" marker-end="url(#ah)"/>
+          <text class="sv-cond" x="224" y="63" text-anchor="middle" font-size="10">NaOH, Δ</text>
+          <text class="sv-note" x="224" y="92" text-anchor="middle" font-size="9">then H₂SO₄</text>
+          <rect class="sv-box" x="256" y="46" width="172" height="58" rx="10"/>
+          <text class="sv-name" x="342" y="72" text-anchor="middle" font-size="14">Salicylic acid</text>
+          <text class="sv-sub"  x="342" y="90" text-anchor="middle" font-size="10">2-hydroxybenzoic acid</text>
+          <line class="sv-arrow" x1="432" y1="75" x2="492" y2="75" marker-end="url(#ah)"/>
+          <text class="sv-cond" x="462" y="63" text-anchor="middle" font-size="9">(CH₃CO)₂O</text>
+          <text class="sv-note" x="462" y="92" text-anchor="middle" font-size="8">H₃PO₄, 85–90 °C</text>
+          <rect class="sv-box-major" x="496" y="46" width="206" height="58" rx="10"/>
+          <text class="sv-name" x="599" y="72" text-anchor="middle" font-size="14">Aspirin</text>
+          <text class="sv-sub"  x="599" y="90" text-anchor="middle" font-size="10">2-acetyloxybenzoic acid</text>
+          <text class="sv-note" x="599" y="122" text-anchor="middle" font-size="10">+ acetic acid (by-product)</text>
+        </svg>
+      </div>
+      <p class="scheme-caption">Step 1 hydrolyses the natural ester to salicylic acid; step 2 acetylates its phenol –OH to aspirin. The mechanism of that second step is below.</p>
 
       <div class="mech-grid">
         <article class="mech-step">
@@ -195,6 +227,11 @@
           <tr><th scope="col">Property</th><th scope="col">Oil of wintergreen</th><th scope="col">Salicylic acid</th><th scope="col">Aspirin</th></tr>
         </thead>
         <tbody>
+          <tr><th scope="row">Systematic (IUPAC) name</th>
+            <td>methyl 2-hydroxybenzoate</td>
+            <td>2-hydroxybenzoic acid</td>
+            <td>2-acetyloxybenzoic acid</td></tr>
+          <tr><th scope="row">Also known as</th><td>oil of wintergreen · methyl salicylate</td><td>salicylic acid</td><td>aspirin · acetylsalicylic acid</td></tr>
           <tr><th scope="row">Formula</th><td>C₈H₈O₃</td><td>C₇H₆O₃</td><td>C₉H₈O₄</td></tr>
           <tr><th scope="row">Molar mass (g/mol)</th><td>152.15</td><td>138.12</td><td>180.16</td></tr>
           <tr><th scope="row">Role</th><td>natural start</td><td>intermediate</td><td>product</td></tr>
@@ -205,7 +242,8 @@
         </tbody>
       </table>
       <p class="fineprint">
-        Acetic anhydride: C₄H₆O₃, 102.09&nbsp;g/mol (PubChem CID 7918). Acetic acid by-product: 60.05&nbsp;g/mol (CID 176).
+        Acetic anhydride (IUPAC: ethanoic anhydride): C₄H₆O₃, 102.09&nbsp;g/mol (PubChem CID 7918).
+        Acetic acid (IUPAC: ethanoic acid) by-product: 60.05&nbsp;g/mol (CID 176).
       </p>
     </section>
 
@@ -327,11 +365,20 @@
     </div>
   </footer>
 
+  <script>
+    // Which molecules to render (keys exist in js/structures.js). Rendered by shared/viewer.js.
+    window.VIEWERS = [
+      { id: "view-wintergreen",      key: "wintergreen" },
+      { id: "view-salicylic_acid",   key: "salicylic_acid" },
+      { id: "view-acetic_anhydride", key: "acetic_anhydride" },
+      { id: "view-aspirin",          key: "aspirin" }
+    ];
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.5.5/3Dmol-min.js"
           crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="js/structures.js"></script>
   <script src="js/references.js"></script>
-  <script src="js/viewer.js"></script>
+  <script src="https://orgolabs.github.io/shared/viewer.js"></script>
   <script src="js/calculator.js"></script>
 </body>
 </html>
