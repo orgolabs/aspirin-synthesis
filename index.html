@@ -4,385 +4,81 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Synthesis of Aspirin — Salicylic Acid + Acetic Anhydride</title>
-  <meta name="description" content="An interactive, fact-checked walkthrough of the synthesis of aspirin (acetylsalicylic acid) from salicylic acid and acetic anhydride, based on the Olmsted 1998 general-chemistry experiment: real 3D structures, the esterification mechanism, the two-step procedure, and a live yield calculator." />
+  <meta name="description" content="An interactive, fact-checked walkthrough of the synthesis of aspirin from salicylic acid and acetic anhydride (Olmsted 1998): real 3D structures, the esterification mechanism, the two-step procedure, and a live yield calculator." />
   <link rel="icon" href="https://orgolabs.github.io/shared/brand/orgolabs-icon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
   <link rel="stylesheet" href="https://orgolabs.github.io/shared/styles.css" />
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <div class="brandbar">
-    <div class="wrap">
-      <a class="brand" href="https://github.com/orgolabs" target="_blank" rel="noopener">
-        <img src="https://orgolabs.github.io/shared/brand/orgolabs-icon.svg" alt="" width="28" height="28" />
-        <span class="brand-name"><b>orgo</b>labs</span>
-      </a>
-      <span class="brand-sep">/</span>
-      <span class="brand-lab">Synthesis of Aspirin</span>
-      <a class="brand-repo" href="https://github.com/orgolabs/aspirin-synthesis" target="_blank" rel="noopener">View source ↗</a>
-    </div>
-  </div>
-
-  <header class="hero">
-    <div class="wrap">
-      <p class="eyebrow">Interactive organic chemistry · esterification &amp; multistep synthesis</p>
-      <h1>The Synthesis of Aspirin</h1>
-      <p class="lede">
-        Aspirin (<strong>acetylsalicylic acid</strong>) is made by acetylating the phenol group of
-        <strong>salicylic acid</strong> with <strong>acetic anhydride</strong>. In the classic general-chemistry
-        version it is the second half of a two-step journey that starts from <strong>oil of wintergreen</strong> —
-        a single aromatic core, modified step by step. Rotate the real molecules, follow the mechanism, and scale
-        the experiment below.
-      </p>
-      <div class="reaction-strip" aria-label="Reaction summary">
-        <span class="mol-pair">
-          <span class="mol">salicylic acid<br><small>C₇H₆O₃</small></span>
-          <span class="plus">+</span>
-          <span class="mol">acetic anhydride<br><small>(CH₃CO)₂O</small></span>
-        </span>
-        <span class="arrow">
-          <span class="above">H₃PO₄ (cat.)</span>
-          <span class="shaft">→</span>
-          <span class="below">85–90&nbsp;°C, 5&nbsp;min</span>
-        </span>
-        <span class="mol-pair">
-          <span class="mol major">aspirin<br><small>C₉H₈O₄</small></span>
-          <span class="plus">+</span>
-          <span class="mol minor">acetic acid<br><small>CH₃CO₂H</small></span>
-        </span>
-      </div>
-    </div>
-  </header>
-
-  <nav class="tocbar" aria-label="Section navigation">
-    <div class="wrap">
-      <a href="#about">About</a>
-      <a href="#viewers">3D structures</a>
-      <a href="#mechanism">Mechanism</a>
-      <a href="#procedure">Procedure</a>
-      <a href="#calculator">Calculator</a>
-      <a href="#references">References</a>
-    </div>
-  </nav>
-
-  <main id="main" class="wrap">
-
-    <!-- ============ ABOUT ============ -->
-    <section id="about" class="card">
-      <h2>One aromatic core, modified twice</h2>
-      <p>
-        Oil of wintergreen (<strong>methyl salicylate</strong>), salicylic acid, and aspirin all share the same
-        benzene-ring core carrying a carbonyl group — the reactions in this experiment only change the
-        <em>periphery</em> of that core. That makes aspirin a friendly first look at how chemists build a useful
-        molecule from a natural starting material.
-      </p>
-      <p>
-        <strong>Step 1 (hydrolysis):</strong> oil of wintergreen is boiled with NaOH and then acidified, cleaving
-        its ester to give <strong>salicylic acid</strong>.
-        <strong>Step 2 (condensation / esterification):</strong> salicylic acid is heated with
-        <strong>acetic anhydride</strong> and a drop of acid catalyst, which acetylates its phenol –OH to give
-        <strong>aspirin</strong> plus acetic acid. Aspirin itself (first marketed by Bayer in 1899) is one of the
-        most widely used medicines in the world.
-      </p>
-    </section>
-
-    <!-- ============ 3D VIEWERS ============ -->
-    <section id="viewers" class="card">
-      <h2>1 · The molecules in real 3D</h2>
-      <p class="section-intro">
-        <strong>Real geometries</strong> from PubChem — drag to rotate, scroll to zoom. Follow the shared aromatic
-        core from wintergreen → salicylic acid → aspirin, and see acetic anhydride, the reagent that delivers the
-        acetyl group. Turn on <em>Highlight O</em> to pick out the oxygens that change.
-      </p>
-
-      <div class="viewer-controls" role="group" aria-label="3D display controls">
-        <div class="ctrl-group">
-          <span class="ctrl-label">Style</span>
-          <button type="button" class="btn" data-style="stick">Stick</button>
-          <button type="button" class="btn is-active" data-style="ballstick">Ball &amp; stick</button>
-          <button type="button" class="btn" data-style="sphere">Space-fill</button>
-        </div>
-        <div class="ctrl-group">
-          <button type="button" class="btn toggle" id="spinBtn" aria-pressed="false">Spin</button>
-          <button type="button" class="btn toggle" id="hBtn" aria-pressed="true">Show H</button>
-          <button type="button" class="btn toggle" id="ohBtn" aria-pressed="false">Highlight O</button>
-        </div>
-      </div>
-
-      <div class="viewer-grid grid-4">
-        <figure class="viewer-card">
-          <figcaption><span class="tag tag-start">Starting material</span><b>Oil of wintergreen</b></figcaption>
-          <p class="mol-sci">methyl 2-hydroxybenzoate</p>
-          <div class="viewer" id="view-wintergreen"></div>
-          <p class="viewer-note">Methyl salicylate — the natural ester. Hydrolyzed in step 1.</p>
-        </figure>
-        <figure class="viewer-card">
-          <figcaption><span class="tag tag-start">Intermediate</span><b>Salicylic acid</b></figcaption>
-          <p class="mol-sci">2-hydroxybenzoic acid</p>
-          <div class="viewer" id="view-salicylic_acid"></div>
-          <p class="viewer-note">Has a phenol –OH (and a –CO₂H). The phenol is what gets acetylated.</p>
-        </figure>
-        <figure class="viewer-card">
-          <figcaption><span class="tag tag-start">Reagent</span><b>Acetic anhydride</b></figcaption>
-          <p class="mol-sci">ethanoic anhydride</p>
-          <div class="viewer" id="view-acetic_anhydride"></div>
-          <p class="viewer-note">The acetyl (CH₃CO–) donor; far more reactive than acetic acid.</p>
-        </figure>
-        <figure class="viewer-card">
-          <figcaption><span class="tag tag-major">Product</span><b>Aspirin</b></figcaption>
-          <p class="mol-sci">2-acetyloxybenzoic acid</p>
-          <div class="viewer" id="view-aspirin"></div>
-          <p class="viewer-note"><b>Acetylsalicylic acid.</b> The phenol –OH is now an ester (two C=O groups).</p>
-        </figure>
-      </div>
-      <p id="viewer-fallback" class="viewer-fallback" hidden>
-        The 3D viewer library (3Dmol.js) could not load from the CDN. Check your network connection and reload.
-      </p>
-    </section>
-
-    <!-- ============ MECHANISM ============ -->
-    <section id="mechanism" class="card">
-      <h2>2 · How the acetyl group is installed</h2>
-      <p class="section-intro">
-        The aspirin-forming step is a <strong>nucleophilic acyl substitution</strong> (an esterification): the
-        phenol oxygen of salicylic acid attacks a carbonyl carbon of acetic anhydride, and acetate leaves.
-      </p>
-
-      <h3 class="proc-head">Reaction pathway (two steps)</h3>
-      <div class="pathway">
-        <div class="path-node">
-          <div class="path-card"><img src="https://orgolabs.github.io/shared/mol2d/methyl-salicylate.png" alt="Methyl salicylate skeletal structure" loading="lazy"></div>
-          <p class="path-name">Oil of wintergreen</p><p class="path-sub">methyl 2-hydroxybenzoate</p>
-        </div>
-        <div class="path-op">
-          <span class="cond">NaOH, Δ</span><span class="shaft" aria-hidden="true">→</span><span class="sub">then H₂SO₄</span>
-        </div>
-        <div class="path-node">
-          <div class="path-card"><img src="https://orgolabs.github.io/shared/mol2d/salicylic-acid.png" alt="Salicylic acid skeletal structure" loading="lazy"></div>
-          <p class="path-name">Salicylic acid</p><p class="path-sub">2-hydroxybenzoic acid</p>
-        </div>
-        <div class="path-op">
-          <span class="cond">(CH₃CO)₂O</span><span class="shaft" aria-hidden="true">→</span><span class="sub">H₃PO₄, 85–90 °C</span>
-        </div>
-        <div class="path-node major">
-          <div class="path-card"><img src="https://orgolabs.github.io/shared/mol2d/aspirin.png" alt="Aspirin skeletal structure" loading="lazy"></div>
-          <p class="path-name">Aspirin</p><p class="path-sub">2-acetyloxybenzoic acid · + AcOH</p>
-        </div>
-      </div>
-      <p class="scheme-caption">Step 1 hydrolyses the natural ester to salicylic acid; step 2 acetylates its phenol –OH to aspirin. The mechanism of that second step is below.</p>
-
-      <div class="mech-grid">
-        <article class="mech-step">
-          <span class="step-num">1</span>
-          <h3>Activate the carbonyl</h3>
-          <p>
-            A trace of acid catalyst (conc. H₃PO₄) protonates a carbonyl of <strong>acetic anhydride</strong>,
-            making its carbon more electrophilic — easier for a weak nucleophile like a phenol to attack.
-          </p>
-        </article>
-        <article class="mech-step major-accent">
-          <span class="step-num">2</span>
-          <h3>Phenol attacks → ester</h3>
-          <p>
-            The <strong>phenol –OH</strong> of salicylic acid attacks that carbonyl carbon. The anhydride breaks,
-            transferring a <strong>–COCH₃ (acetyl)</strong> group to the oxygen and forming the new
-            <strong>ester</strong> bond of aspirin.
-          </p>
-        </article>
-        <article class="mech-step minor-accent">
-          <span class="step-num">3</span>
-          <h3>Acetic acid leaves</h3>
-          <p>
-            The other half of the anhydride departs as <strong>acetic acid</strong>, and the catalyst is
-            regenerated. Net: salicylic acid + acetic anhydride → aspirin + acetic acid.
-          </p>
-        </article>
-      </div>
-
-      <div class="callout info">
-        <h3>Why acetic anhydride instead of acetic acid?</h3>
-        <p>
-          You could imagine esterifying with acetic acid directly, but that equilibrium is slow and unfavorable.
-          <strong>Acetic anhydride</strong> is a much better acetylating agent: its leaving group (acetate/acetic
-          acid) makes the acylation fast and essentially irreversible, so the reaction finishes in minutes.
-          Excess anhydride is destroyed with water at the end (it hydrolyzes to harmless acetic acid).
-        </p>
-      </div>
-
-      <div class="callout">
-        <h3>Reading it by FTIR (how you prove it worked)</h3>
-        <p>
-          Salicylic acid and oil of wintergreen show a broad hydrogen-bonded <strong>O–H band (≈3000–3500&nbsp;cm⁻¹)</strong>
-          and a single C=O near <strong>1700&nbsp;cm⁻¹</strong>. <strong>Aspirin loses the broad O–H</strong> (the phenol
-          is now an ester) and shows <strong>two distinct C=O peaks</strong> — one for the ester and one for the
-          carboxylic acid. That change is the fingerprint that the acetylation happened.
-        </p>
-      </div>
-
-      <div class="table-scroll">
-      <table class="facts">
-        <caption>Key facts (fact-checked against PubChem &amp; the Olmsted 1998 experiment)</caption>
-        <thead>
-          <tr><th scope="col">Property</th><th scope="col">Oil of wintergreen</th><th scope="col">Salicylic acid</th><th scope="col">Aspirin</th></tr>
-        </thead>
-        <tbody>
-          <tr><th scope="row">Systematic (IUPAC) name</th>
-            <td>methyl 2-hydroxybenzoate</td>
-            <td>2-hydroxybenzoic acid</td>
-            <td>2-acetyloxybenzoic acid</td></tr>
-          <tr><th scope="row">Also known as</th><td>oil of wintergreen · methyl salicylate</td><td>salicylic acid</td><td>aspirin · acetylsalicylic acid</td></tr>
-          <tr><th scope="row">Formula</th><td>C₈H₈O₃</td><td>C₇H₆O₃</td><td>C₉H₈O₄</td></tr>
-          <tr><th scope="row">Molar mass (g/mol)</th><td>152.15</td><td>138.12</td><td>180.16</td></tr>
-          <tr><th scope="row">Role</th><td>natural start</td><td>intermediate</td><td>product</td></tr>
-          <tr><th scope="row">PubChem CID</th>
-            <td><a href="https://pubchem.ncbi.nlm.nih.gov/compound/4133">4133</a></td>
-            <td><a href="https://pubchem.ncbi.nlm.nih.gov/compound/338">338</a></td>
-            <td><a href="https://pubchem.ncbi.nlm.nih.gov/compound/2244">2244</a></td></tr>
-        </tbody>
-      </table>
-      </div>
-      <p class="fineprint">
-        Acetic anhydride (IUPAC: ethanoic anhydride): C₄H₆O₃, 102.09&nbsp;g/mol (PubChem CID 7918).
-        Acetic acid (IUPAC: ethanoic acid) by-product: 60.05&nbsp;g/mol (CID 176).
-      </p>
-    </section>
-
-    <!-- ============ PROCEDURE ============ -->
-    <section id="procedure" class="card">
-      <h2>3 · Step-by-step laboratory procedure</h2>
-      <p class="section-intro">
-        The two-step general-chemistry procedure from the Olmsted (1998) experiment, reproduced so you can follow
-        it alongside the structures and calculator. Always use your instructor's version and your lab's safety
-        rules — this page is a study aid, not a substitute for a supervised SOP.
-      </p>
-      <a class="dl-btn" href="docs/synthesis-of-aspirin-lab-manual.pdf" target="_blank" rel="noopener">⬇ Download the full lab handout (PDF)</a>
-
-      <h3 class="proc-head">Reagents &amp; materials (aspirin step, per 1.4&nbsp;g salicylic acid)</h3>
-      <div class="table-scroll">
-      <table class="reagents">
-        <thead><tr><th scope="col">Reagent</th><th scope="col">Amount</th><th scope="col">Role</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">Salicylic acid</th><td>1.4&nbsp;g (10.1&nbsp;mmol)</td><td>substrate (the phenol/acid)</td></tr>
-          <tr><th scope="row">Acetic anhydride</th><td>3.0&nbsp;mL (≈3.2&nbsp;g, 31.7&nbsp;mmol, ~3 equiv)</td><td>acetylating agent (excess)</td></tr>
-          <tr><th scope="row">Conc. phosphoric acid, H₃PO₄</th><td>5 drops</td><td>acid catalyst</td></tr>
-          <tr><th scope="row">Deionized water</th><td>as needed</td><td>quench excess anhydride &amp; recrystallize</td></tr>
-        </tbody>
-      </table>
-      </div>
-
-      <h3 class="proc-head">Step 1 — Oil of wintergreen → salicylic acid (hydrolysis)</h3>
-      <ol class="procedure">
-        <li>Weigh ~<b>4&nbsp;mL oil of wintergreen</b> into a clean, dry 250-mL beaker.</li>
-        <li>Add <b>40&nbsp;mL of 6&nbsp;M NaOH</b> with stirring (a precipitate forms); heat to a <b>gentle boil for 15&nbsp;min</b>, reducing the rate to avoid bumping.</li>
-        <li>Cool in an ice bath until just warm, then slowly add <b>50&nbsp;mL of 8&nbsp;M H₂SO₄</b> with stirring (salicylic acid precipitates).</li>
-        <li>Chill, then isolate the solid by <b>suction filtration (Büchner funnel)</b>; rinse with iced deionized water.</li>
-        <li><b>Recrystallize:</b> dissolve the crude solid in ~100&nbsp;mL hot deionized water, cool, chill in ice, isolate, and dry overnight.</li>
-      </ol>
-
-      <h3 class="proc-head">Step 2 — Salicylic acid → aspirin (acetylation)</h3>
-      <ol class="procedure">
-        <li>Weigh <b>1.4&nbsp;g salicylic acid</b> into a dry 125-mL Erlenmeyer flask.</li>
-        <li>In the <b>fume hood</b>, add <b>3.0&nbsp;mL acetic anhydride</b> (caustic vapors) and <b>5 drops conc. H₃PO₄</b>.</li>
-        <li>Stopper with a one-hole stopper fitted with tubing; float the flask in a water bath and hold at <b>85–90&nbsp;°C for 5&nbsp;min</b> (do not boil).</li>
-        <li>Stop heating and immediately add <b>2&nbsp;mL water</b> through the tubing to destroy excess acetic anhydride (hot acid vapors).</li>
-        <li>Cool, remove the stopper, add <b>20&nbsp;mL water</b>; let stand until crystals form, then add <b>10&nbsp;mL water</b>, swirl, and chill in an ice bath.</li>
-        <li>Isolate the crude aspirin by suction filtration; rinse with iced water.</li>
-        <li><b>Recrystallize:</b> dissolve in <b>~10&nbsp;mL water per gram</b> of solid, heat to dissolve, cool and chill to crystallize, and isolate.</li>
-        <li><b>Oven-dry at 80&nbsp;°C for 1&nbsp;h</b> (aspirin melts/decomposes at ~100&nbsp;°C), cool, and weigh.</li>
-      </ol>
-
-      <h3 class="proc-head">Characterization &amp; report</h3>
-      <ol class="procedure">
-        <li>Record the <b>mass of product</b> and calculate <b>theoretical and percent yield</b> (use the calculator below).</li>
-        <li>Take an <b>FTIR spectrum</b> — confirm loss of the broad O–H and the appearance of two C=O peaks in aspirin.</li>
-        <li>Optionally measure the <b>melting point</b> of salicylic acid and aspirin.</li>
-        <li>In your discussion, explain <b>why isolated yields fall short of theoretical</b> (losses on transfer, incomplete reaction, solubility during recrystallization).</li>
-      </ol>
-
-      <div class="safety">
-        <b>Safety:</b> Acetic anhydride gives off caustic vapors — use a fume hood. Concentrated H₃PO₄ and H₂SO₄
-        are corrosive; 6&nbsp;M NaOH is caustic. Keep the aspirin oven below 100&nbsp;°C (it melts and decomposes).
-        Wear goggles and gloves.
-      </div>
-      <div class="safety" style="margin-top:12px">
-        <b>Waste disposal:</b> The acidic filtrate from Step&nbsp;1 goes in the designated <b>acidic aqueous waste</b>.
-        Other relatively benign liquid waste may be rinsed down the sink per your lab's rules.
-      </div>
-    </section>
-
-    <!-- ============ CALCULATOR ============ -->
-    <section id="calculator" class="card">
-      <h2>4 · Live yield calculator</h2>
-      <p class="section-intro">
-        Pre-filled with the experiment's amounts — change any input and everything updates. Molar masses:
-        salicylic acid 138.12, acetic anhydride 102.09, aspirin 180.16&nbsp;g/mol; acetic anhydride density
-        1.08&nbsp;g/mL. Aspirin forms 1&nbsp;:&nbsp;1 from the limiting reagent.
-      </p>
-      <div class="calc">
-        <div class="calc-inputs">
-          <label>Salicylic acid mass (g)
-            <input type="number" id="in-sal" value="1.4" min="0" step="0.1" />
-          </label>
-          <label>Acetic anhydride volume (mL)
-            <input type="number" id="in-anh" value="3.0" min="0" step="0.1" />
-            <small>density 1.08 g/mL</small>
-          </label>
-          <label>Isolated aspirin mass (g) <span class="opt">optional</span>
-            <input type="number" id="in-isolated" value="1.5" min="0" step="0.1" />
-          </label>
-        </div>
-        <div class="calc-outputs" id="calc-out">
-          <div class="out"><span class="out-label">Salicylic acid</span><span class="out-val" id="o-salmmol">—</span><span class="out-unit">mmol</span></div>
-          <div class="out"><span class="out-label">Acetic anhydride</span><span class="out-val" id="o-anhmmol">—</span><span class="out-unit">mmol</span></div>
-          <div class="out"><span class="out-label">Anhydride excess</span><span class="out-val" id="o-equiv">—</span><span class="out-unit">equiv</span></div>
-          <div class="out"><span class="out-label">Limiting reagent</span><span class="out-val" id="o-limiting" style="font-size:1.05rem">—</span><span class="out-unit">&nbsp;</span></div>
-          <div class="out major"><span class="out-label">Theoretical aspirin</span><span class="out-val" id="o-theory">—</span><span class="out-unit">g</span></div>
-          <div class="out yield"><span class="out-label">Percent yield</span><span class="out-val" id="o-yield">—</span><span class="out-unit">%</span></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ REFERENCES ============ -->
-    <section id="references" class="card">
-      <h2>5 · References &amp; sources</h2>
-      <p class="section-intro">
-        Every claim above is checked against these. Links are chosen to be <strong>public / educational</strong>
-        where possible; DOIs resolve to the publisher of record, and each is tagged by access level.
-      </p>
-      <ol class="refs" id="ref-list"></ol>
-      <p class="fineprint">
-        Molecular data and 3D coordinates: <a href="https://pubchem.ncbi.nlm.nih.gov/compound/2244">PubChem</a>
-        (public domain, U.S. National Library of Medicine) via the PUG-REST API, retrieved 2026-10-24 —
-        salicylic acid CID 338, acetic anhydride CID 7918, aspirin CID 2244, methyl salicylate CID 4133.
-        3D rendering by <a href="https://3dmol.csb.pitt.edu/">3Dmol.js</a> (BSD-3-Clause).
-      </p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap">
-      <p><strong>Synthesis of Aspirin</strong> — part of <a href="https://github.com/orgolabs">orgolabs</a>, an open
-        educational resource. Content &amp; code under the <a href="LICENSE">MIT License</a>. Structure data © PubChem (public domain).</p>
-      <p class="fineprint">Static site for GitHub Pages. Fact-checked 2026-10-24. Not a substitute for a supervised laboratory SOP.</p>
-    </div>
-  </footer>
+  <noscript><p style="padding:24px">This interactive lab needs JavaScript. Source: <a href="https://github.com/orgolabs/aspirin-synthesis">github.com/orgolabs/aspirin-synthesis</a></p></noscript>
 
   <script>
-    // Which molecules to render (keys exist in js/structures.js). Rendered by shared/viewer.js.
-    window.VIEWERS = [
-      { id: "view-wintergreen",      key: "wintergreen" },
-      { id: "view-salicylic_acid",   key: "salicylic_acid" },
-      { id: "view-acetic_anhydride", key: "acetic_anhydride" },
-      { id: "view-aspirin",          key: "aspirin" }
-    ];
+    window.LAB = {
+      repo: "aspirin-synthesis",
+      labName: "Synthesis of Aspirin",
+      eyebrow: "Interactive organic chemistry · esterification & multistep synthesis",
+      title: "The Synthesis of Aspirin",
+      lede: "Aspirin (<strong>acetylsalicylic acid</strong>) is made by acetylating the phenol group of <strong>salicylic acid</strong> with <strong>acetic anhydride</strong>. In the classic general-chemistry version it is the second half of a two-step journey that starts from <strong>oil of wintergreen</strong>. Rotate the real molecules, follow the mechanism, and scale the experiment below.",
+      reaction: "\\ce{C7H6O3 + (CH3CO)2O ->[\\text{H3PO4}] C9H8O4 + CH3CO2H}",
+      content: "content.md",
+      viewers: [
+        { id: "view-wintergreen", key: "wintergreen", kind: "start", role: "Starting material", name: "Oil of wintergreen",
+          iupac: "methyl 2-hydroxybenzoate", note: "Methyl salicylate — the natural ester. Hydrolyzed in step 1." },
+        { id: "view-salicylic_acid", key: "salicylic_acid", kind: "start", role: "Intermediate", name: "Salicylic acid",
+          iupac: "2-hydroxybenzoic acid", note: "Has a phenol –OH (and a –CO₂H). The phenol is what gets acetylated." },
+        { id: "view-acetic_anhydride", key: "acetic_anhydride", kind: "start", role: "Reagent", name: "Acetic anhydride",
+          iupac: "ethanoic anhydride", note: "The acetyl (CH₃CO–) donor; far more reactive than acetic acid." },
+        { id: "view-aspirin", key: "aspirin", kind: "major", role: "Product", name: "Aspirin",
+          iupac: "2-acetyloxybenzoic acid", note: "<b>Acetylsalicylic acid.</b> The phenol –OH is now an ester (two C=O groups)." }
+      ],
+      pathway: [
+        { node: { img: "methyl-salicylate.png", name: "Oil of wintergreen", sub: "methyl 2-hydroxybenzoate" } },
+        { op: { cond: "\\ce{NaOH}", sub: "Δ · then H₂SO₄" } },
+        { node: { img: "salicylic-acid.png", name: "Salicylic acid", sub: "2-hydroxybenzoic acid" } },
+        { op: { cond: "\\ce{(CH3CO)2O}", sub: "H₃PO₄ · 85–90 °C" } },
+        { node: { img: "aspirin.png", name: "Aspirin", sub: "+ acetic acid", kind: "major" } }
+      ],
+      pathwayCaption: "Step 1 hydrolyses the natural ester to salicylic acid; step 2 acetylates its phenol –OH to aspirin (+ acetic acid). The mechanism of that second step is below.",
+      calculator: {
+        intro: "Pre-filled with the experiment's amounts. Molar masses: salicylic acid 138.12, acetic anhydride 102.09, aspirin 180.16 g/mol; acetic anhydride density 1.08 g/mL. Aspirin forms 1 : 1 from the limiting reagent.",
+        inputs: [
+          { id: "in-sal", label: "Salicylic acid mass (g)", value: "1.4", step: "0.1" },
+          { id: "in-anh", label: "Acetic anhydride volume (mL)", value: "3.0", step: "0.1", note: "density 1.08 g/mL" },
+          { id: "in-isolated", label: "Isolated aspirin mass (g)", value: "1.5", step: "0.1", optional: true }
+        ],
+        outputs: [
+          { id: "o-salmmol", label: "Salicylic acid", unit: "mmol" },
+          { id: "o-anhmmol", label: "Acetic anhydride", unit: "mmol" },
+          { id: "o-equiv", label: "Anhydride excess", unit: "equiv" },
+          { id: "o-limiting", label: "Limiting reagent", unit: "" },
+          { id: "o-theory", label: "Theoretical aspirin", unit: "g", kind: "major" },
+          { id: "o-yield", label: "Percent yield", unit: "%", kind: "yield" }
+        ],
+        compute: function (v) {
+          var S = 138.12, A = 102.09, P = 180.16, d = 1.08;
+          if (!(v["in-sal"] > 0)) return {};
+          var sm = v["in-sal"] / S * 1000, am = v["in-anh"] * d / A * 1000, lim = Math.min(sm, am), theory = lim / 1000 * P;
+          var o = {
+            "o-salmmol": sm.toFixed(2),
+            "o-anhmmol": am.toFixed(2),
+            "o-equiv": (sm > 0 ? am / sm : 0).toFixed(2),
+            "o-limiting": sm <= am ? "salicylic acid" : "acetic anhydride",
+            "o-theory": theory.toFixed(3)
+          };
+          o["o-yield"] = v["in-isolated"] > 0 ? (v["in-isolated"] / theory * 100).toFixed(1) : "";
+          return o;
+        }
+      },
+      references: [
+        { authors: "Olmsted, J., III.", title: "Synthesis of Aspirin: A General Chemistry Experiment", meta: "J. Chem. Educ. 1998, 75 (10), 1261–1263.", note: "The source experiment: a two-step synthesis (oil of wintergreen → salicylic acid → aspirin) with FTIR characterization.", url: "https://doi.org/10.1021/ed075p1261", linkText: "doi.org/10.1021/ed075p1261", access: "paywall" },
+        { authors: "Brown, D. B.; Friedman, L. B.", title: "The aspirin project. Laboratory experiments for introductory chemistry", meta: "J. Chem. Educ. 1973, 50 (3), 214–215.", note: "The earlier report the one-step salicylic-acid → aspirin synthesis is traced to.", url: "https://doi.org/10.1021/ed050p214", linkText: "doi.org/10.1021/ed050p214", access: "paywall" },
+        { authors: "PubChem, U.S. National Library of Medicine.", title: "Salicylic acid (338), Acetic anhydride (7918), Aspirin (2244), Methyl salicylate (4133)", meta: "Public-domain compound records and computed 3D conformers.", note: "Free and public. The 3D coordinates come directly from these records via PUG-REST.", url: "https://pubchem.ncbi.nlm.nih.gov/compound/2244", linkText: "pubchem.ncbi.nlm.nih.gov/compound/2244", access: "open" },
+        { authors: "Wikipedia contributors.", title: "Acetylsalicylic acid (aspirin)", meta: "Open reference corroborating the esterification and FTIR features.", note: "Free and public; a convenient entry point with onward citations.", url: "https://en.wikipedia.org/wiki/Aspirin", linkText: "en.wikipedia.org/wiki/Aspirin", access: "open" },
+        { authors: "Rego, N.; Koes, D.", title: "3Dmol.js: molecular visualization with WebGL", meta: "Bioinformatics 2015, 31 (8), 1322–1324.", note: "The open-source (BSD-3) library rendering the interactive structures.", url: "https://doi.org/10.1093/bioinformatics/btu829", linkText: "doi.org/10.1093/bioinformatics/btu829", access: "open" }
+      ]
+    };
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.5.5/3Dmol-min.js"
-          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="js/structures.js"></script>
-  <script src="js/references.js"></script>
-  <script src="https://orgolabs.github.io/shared/viewer.js"></script>
-  <script src="https://orgolabs.github.io/shared/nav.js"></script>
-  <script src="js/calculator.js"></script>
+  <script src="https://orgolabs.github.io/shared/lab.js"></script>
 </body>
 </html>
