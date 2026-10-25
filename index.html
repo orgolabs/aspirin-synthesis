@@ -150,30 +150,25 @@
       </p>
 
       <h3 class="proc-head">Reaction pathway (two steps)</h3>
-      <div class="scheme">
-        <svg viewBox="0 0 760 160" role="img" aria-label="Two-step aspirin pathway: oil of wintergreen is hydrolysed to salicylic acid, which is then acetylated to aspirin plus acetic acid.">
-          <defs>
-            <marker id="ah" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="9" refY="4" orient="auto">
-              <path class="sv-arrowhead" d="M0,0 L9,4 L0,8 Z"/>
-            </marker>
-          </defs>
-          <rect class="sv-box" x="8" y="46" width="180" height="58" rx="10"/>
-          <text class="sv-name" x="98" y="71" text-anchor="middle" font-size="14">Oil of wintergreen</text>
-          <text class="sv-sub"  x="98" y="90" text-anchor="middle" font-size="11">methyl 2-hydroxybenzoate</text>
-          <line class="sv-arrow" x1="192" y1="75" x2="272" y2="75" marker-end="url(#ah)"/>
-          <text class="sv-cond" x="232" y="60" text-anchor="middle" font-size="11">NaOH, Δ</text>
-          <text class="sv-note" x="232" y="92" text-anchor="middle" font-size="10">then H₂SO₄</text>
-          <rect class="sv-box" x="280" y="46" width="172" height="58" rx="10"/>
-          <text class="sv-name" x="366" y="71" text-anchor="middle" font-size="14">Salicylic acid</text>
-          <text class="sv-sub"  x="366" y="90" text-anchor="middle" font-size="11">2-hydroxybenzoic acid</text>
-          <line class="sv-arrow" x1="460" y1="75" x2="552" y2="75" marker-end="url(#ah)"/>
-          <text class="sv-cond" x="506" y="60" text-anchor="middle" font-size="11">(CH₃CO)₂O</text>
-          <text class="sv-note" x="506" y="92" text-anchor="middle" font-size="10">H₃PO₄, 85–90 °C</text>
-          <rect class="sv-box-major" x="560" y="46" width="192" height="58" rx="10"/>
-          <text class="sv-name" x="656" y="71" text-anchor="middle" font-size="14">Aspirin</text>
-          <text class="sv-sub"  x="656" y="90" text-anchor="middle" font-size="11">2-acetyloxybenzoic acid</text>
-          <text class="sv-note" x="656" y="124" text-anchor="middle" font-size="10">+ acetic acid (by-product)</text>
-        </svg>
+      <div class="pathway">
+        <div class="path-node">
+          <div class="path-card"><img src="https://orgolabs.github.io/shared/mol2d/methyl-salicylate.png" alt="Methyl salicylate skeletal structure" loading="lazy"></div>
+          <p class="path-name">Oil of wintergreen</p><p class="path-sub">methyl 2-hydroxybenzoate</p>
+        </div>
+        <div class="path-op">
+          <span class="cond">NaOH, Δ</span><span class="shaft" aria-hidden="true">→</span><span class="sub">then H₂SO₄</span>
+        </div>
+        <div class="path-node">
+          <div class="path-card"><img src="https://orgolabs.github.io/shared/mol2d/salicylic-acid.png" alt="Salicylic acid skeletal structure" loading="lazy"></div>
+          <p class="path-name">Salicylic acid</p><p class="path-sub">2-hydroxybenzoic acid</p>
+        </div>
+        <div class="path-op">
+          <span class="cond">(CH₃CO)₂O</span><span class="shaft" aria-hidden="true">→</span><span class="sub">H₃PO₄, 85–90 °C</span>
+        </div>
+        <div class="path-node major">
+          <div class="path-card"><img src="https://orgolabs.github.io/shared/mol2d/aspirin.png" alt="Aspirin skeletal structure" loading="lazy"></div>
+          <p class="path-name">Aspirin</p><p class="path-sub">2-acetyloxybenzoic acid · + AcOH</p>
+        </div>
       </div>
       <p class="scheme-caption">Step 1 hydrolyses the natural ester to salicylic acid; step 2 acetylates its phenol –OH to aspirin. The mechanism of that second step is below.</p>
 
