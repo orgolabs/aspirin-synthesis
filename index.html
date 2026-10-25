@@ -36,17 +36,21 @@
         the experiment below.
       </p>
       <div class="reaction-strip" aria-label="Reaction summary">
-        <span class="mol">salicylic acid<br><small>C₇H₆O₃</small></span>
-        <span class="plus">+</span>
-        <span class="mol">acetic anhydride<br><small>(CH₃CO)₂O</small></span>
+        <span class="mol-pair">
+          <span class="mol">salicylic acid<br><small>C₇H₆O₃</small></span>
+          <span class="plus">+</span>
+          <span class="mol">acetic anhydride<br><small>(CH₃CO)₂O</small></span>
+        </span>
         <span class="arrow">
           <span class="above">H₃PO₄ (cat.)</span>
           <span class="shaft">→</span>
           <span class="below">85–90&nbsp;°C, 5&nbsp;min</span>
         </span>
-        <span class="mol major">aspirin<br><small>C₉H₈O₄</small></span>
-        <span class="plus">+</span>
-        <span class="mol minor">acetic acid<br><small>CH₃CO₂H</small></span>
+        <span class="mol-pair">
+          <span class="mol major">aspirin<br><small>C₉H₈O₄</small></span>
+          <span class="plus">+</span>
+          <span class="mol minor">acetic acid<br><small>CH₃CO₂H</small></span>
+        </span>
       </div>
     </div>
   </header>
@@ -147,28 +151,28 @@
 
       <h3 class="proc-head">Reaction pathway (two steps)</h3>
       <div class="scheme">
-        <svg viewBox="0 0 710 150" role="img" aria-label="Two-step aspirin pathway: oil of wintergreen is hydrolysed to salicylic acid, which is then acetylated to aspirin plus acetic acid.">
+        <svg viewBox="0 0 760 160" role="img" aria-label="Two-step aspirin pathway: oil of wintergreen is hydrolysed to salicylic acid, which is then acetylated to aspirin plus acetic acid.">
           <defs>
-            <marker id="ah" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
-              <path class="sv-arrowhead" d="M0,0 L7,3 L0,6 Z"/>
+            <marker id="ah" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="9" refY="4" orient="auto">
+              <path class="sv-arrowhead" d="M0,0 L9,4 L0,8 Z"/>
             </marker>
           </defs>
-          <rect class="sv-box" x="8" y="46" width="184" height="58" rx="10"/>
-          <text class="sv-name" x="100" y="72" text-anchor="middle" font-size="14">Oil of wintergreen</text>
-          <text class="sv-sub"  x="100" y="90" text-anchor="middle" font-size="10">methyl 2-hydroxybenzoate</text>
-          <line class="sv-arrow" x1="196" y1="75" x2="252" y2="75" marker-end="url(#ah)"/>
-          <text class="sv-cond" x="224" y="63" text-anchor="middle" font-size="10">NaOH, Δ</text>
-          <text class="sv-note" x="224" y="92" text-anchor="middle" font-size="9">then H₂SO₄</text>
-          <rect class="sv-box" x="256" y="46" width="172" height="58" rx="10"/>
-          <text class="sv-name" x="342" y="72" text-anchor="middle" font-size="14">Salicylic acid</text>
-          <text class="sv-sub"  x="342" y="90" text-anchor="middle" font-size="10">2-hydroxybenzoic acid</text>
-          <line class="sv-arrow" x1="432" y1="75" x2="492" y2="75" marker-end="url(#ah)"/>
-          <text class="sv-cond" x="462" y="63" text-anchor="middle" font-size="9">(CH₃CO)₂O</text>
-          <text class="sv-note" x="462" y="92" text-anchor="middle" font-size="8">H₃PO₄, 85–90 °C</text>
-          <rect class="sv-box-major" x="496" y="46" width="206" height="58" rx="10"/>
-          <text class="sv-name" x="599" y="72" text-anchor="middle" font-size="14">Aspirin</text>
-          <text class="sv-sub"  x="599" y="90" text-anchor="middle" font-size="10">2-acetyloxybenzoic acid</text>
-          <text class="sv-note" x="599" y="122" text-anchor="middle" font-size="10">+ acetic acid (by-product)</text>
+          <rect class="sv-box" x="8" y="46" width="180" height="58" rx="10"/>
+          <text class="sv-name" x="98" y="71" text-anchor="middle" font-size="14">Oil of wintergreen</text>
+          <text class="sv-sub"  x="98" y="90" text-anchor="middle" font-size="11">methyl 2-hydroxybenzoate</text>
+          <line class="sv-arrow" x1="192" y1="75" x2="272" y2="75" marker-end="url(#ah)"/>
+          <text class="sv-cond" x="232" y="60" text-anchor="middle" font-size="11">NaOH, Δ</text>
+          <text class="sv-note" x="232" y="92" text-anchor="middle" font-size="10">then H₂SO₄</text>
+          <rect class="sv-box" x="280" y="46" width="172" height="58" rx="10"/>
+          <text class="sv-name" x="366" y="71" text-anchor="middle" font-size="14">Salicylic acid</text>
+          <text class="sv-sub"  x="366" y="90" text-anchor="middle" font-size="11">2-hydroxybenzoic acid</text>
+          <line class="sv-arrow" x1="460" y1="75" x2="552" y2="75" marker-end="url(#ah)"/>
+          <text class="sv-cond" x="506" y="60" text-anchor="middle" font-size="11">(CH₃CO)₂O</text>
+          <text class="sv-note" x="506" y="92" text-anchor="middle" font-size="10">H₃PO₄, 85–90 °C</text>
+          <rect class="sv-box-major" x="560" y="46" width="192" height="58" rx="10"/>
+          <text class="sv-name" x="656" y="71" text-anchor="middle" font-size="14">Aspirin</text>
+          <text class="sv-sub"  x="656" y="90" text-anchor="middle" font-size="11">2-acetyloxybenzoic acid</text>
+          <text class="sv-note" x="656" y="124" text-anchor="middle" font-size="10">+ acetic acid (by-product)</text>
         </svg>
       </div>
       <p class="scheme-caption">Step 1 hydrolyses the natural ester to salicylic acid; step 2 acetylates its phenol –OH to aspirin. The mechanism of that second step is below.</p>
@@ -221,6 +225,7 @@
         </p>
       </div>
 
+      <div class="table-scroll">
       <table class="facts">
         <caption>Key facts (fact-checked against PubChem &amp; the Olmsted 1998 experiment)</caption>
         <thead>
@@ -241,6 +246,7 @@
             <td><a href="https://pubchem.ncbi.nlm.nih.gov/compound/2244">2244</a></td></tr>
         </tbody>
       </table>
+      </div>
       <p class="fineprint">
         Acetic anhydride (IUPAC: ethanoic anhydride): C₄H₆O₃, 102.09&nbsp;g/mol (PubChem CID 7918).
         Acetic acid (IUPAC: ethanoic acid) by-product: 60.05&nbsp;g/mol (CID 176).
@@ -258,6 +264,7 @@
       <a class="dl-btn" href="docs/synthesis-of-aspirin-lab-manual.pdf" target="_blank" rel="noopener">⬇ Download the full lab handout (PDF)</a>
 
       <h3 class="proc-head">Reagents &amp; materials (aspirin step, per 1.4&nbsp;g salicylic acid)</h3>
+      <div class="table-scroll">
       <table class="reagents">
         <thead><tr><th scope="col">Reagent</th><th scope="col">Amount</th><th scope="col">Role</th></tr></thead>
         <tbody>
@@ -267,6 +274,7 @@
           <tr><th scope="row">Deionized water</th><td>as needed</td><td>quench excess anhydride &amp; recrystallize</td></tr>
         </tbody>
       </table>
+      </div>
 
       <h3 class="proc-head">Step 1 — Oil of wintergreen → salicylic acid (hydrolysis)</h3>
       <ol class="procedure">
