@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Synthesis of Aspirin — Salicylic Acid + Acetic Anhydride</title>
+  <meta name="description" content="An interactive, fact-checked walkthrough of the microscale synthesis of aspirin from salicylic acid and acetic anhydride (Williamson &amp; Masters, 7th ed.): real 3D structures, the esterification mechanism, the one-step procedure, and a live yield calculator." />
+  <link rel="icon" href="https://orgolabs.github.io/shared/brand/orgolabs-icon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="stylesheet" href="https://orgolabs.github.io/shared/styles.css" />
+</head>
+<body>
+  <noscript><p style="padding:24px">This interactive lab needs JavaScript. Source: <a href="https://github.com/orgolabs/aspirin-synthesis">github.com/orgolabs/aspirin-synthesis</a></p></noscript>
+
+  <script>
+    window.LAB = {
+      repo: "aspirin-synthesis",
+      labName: "Synthesis of Aspirin",
+      eyebrow: "Interactive organic chemistry · esterification & multistep synthesis",
+      title: "The Synthesis of Aspirin",
+      lede: "Aspirin (<strong>acetylsalicylic acid</strong>) is made in a single step by acetylating the phenol group of <strong>salicylic acid</strong> with <strong>acetic anhydride</strong> under a trace of acid catalyst. Rotate the real molecules, follow the mechanism, and scale the microscale experiment below.",
+      reaction: "\\ce{C7H6O3 + (CH3CO)2O ->[H3PO4] C9H8O4 + CH3CO2H}",
+      content: "content.md",
+      viewers: [
+        { id: "view-salicylic_acid", key: "salicylic_acid", kind: "start", role: "Starting material", name: "Salicylic acid",
+          iupac: "2-hydroxybenzoic acid", note: "Has a phenol –OH (and a –CO₂H). The phenol is what gets acetylated." },
+        { id: "view-acetic_anhydride", key: "acetic_anhydride", kind: "start", role: "Reagent", name: "Acetic anhydride",
+          iupac: "ethanoic anhydride", note: "The acetyl (CH₃CO–) donor; far more reactive than acetic acid." },
+        { id: "view-aspirin", key: "aspirin", kind: "major", role: "Product", name: "Aspirin",
+          iupac: "2-acetyloxybenzoic acid", note: "<b>Acetylsalicylic acid.</b> The phenol –OH is now an ester (two C=O groups)." }
+      ],
+      pathway: [
+        { node: { img: "salicylic-acid.png", name: "Salicylic acid", sub: "2-hydroxybenzoic acid" } },
+        { op: { cond: "\\ce{(CH3CO)2O}", sub: "H₃PO₄ · ~90 °C" } },
+        { node: { img: "aspirin.png", name: "Aspirin", sub: "+ acetic acid", kind: "major" } }
+      ],
+      pathwayCaption: "A single acetylation: acetic anhydride transfers an acetyl group to the phenol –OH of salicylic acid, giving aspirin (+ acetic acid). The mechanism is below.",
+      calculator: {
+        intro: "Pre-filled with the microscale amounts from the manual (138 mg salicylic acid, 0.3 mL acetic anhydride). Molar masses: salicylic acid 138.12, acetic anhydride 102.09, aspirin 180.16 g/mol; acetic anhydride density 1.08 g/mL. Aspirin forms 1 : 1 from the limiting reagent.",
+        inputs: [
+          { id: "in-sal", label: "Salicylic acid mass (g)", value: "0.138", step: "0.01" },
+          { id: "in-anh", label: "Acetic anhydride volume (mL)", value: "0.3", step: "0.1", note: "density 1.08 g/mL" },
+          { id: "in-isolated", label: "Isolated aspirin mass (g)", value: "0.15", step: "0.01", optional: true }
+        ],
+        outputs: [
+          { id: "o-salmmol", label: "Salicylic acid", unit: "mmol" },
+          { id: "o-anhmmol", label: "Acetic anhydride", unit: "mmol" },
+          { id: "o-equiv", label: "Anhydride excess", unit: "equiv" },
+          { id: "o-limiting", label: "Limiting reagent", unit: "" },
+          { id: "o-theory", label: "Theoretical aspirin", unit: "g", kind: "major" },
+          { id: "o-yield", label: "Percent yield", unit: "%", kind: "yield" }
+        ],
+        compute: function (v) {
+          var S = 138.12, A = 102.09, P = 180.16, d = 1.08;
+          if (!(v["in-sal"] > 0)) return {};
+          var sm = v["in-sal"] / S * 1000, am = v["in-anh"] * d / A * 1000, lim = Math.min(sm, am), theory = lim / 1000 * P;
+          var o = {
+            "o-salmmol": sm.toFixed(2),
+            "o-anhmmol": am.toFixed(2),
+            "o-equiv": (sm > 0 ? am / sm : 0).toFixed(2),
+            "o-limiting": sm <= am ? "salicylic acid" : "acetic anhydride",
+            "o-theory": theory.toFixed(3)
+          };
+          o["o-yield"] = v["in-isolated"] > 0 ? (v["in-isolated"] / theory * 100).toFixed(1) : "";
+          return o;
+        }
+      },
+      references: [
+        { authors: "Williamson, K. L.; Masters, K. M.", title: "Synthesis of Acetylsalicylic Acid (Aspirin)", meta: "Macroscale and Microscale Organic Experiments, 7th ed.; Cengage, 2016; p 534.", note: "The source experiment: the one-step microscale acetylation of salicylic acid, with melting-point and IR characterization. The handout is bundled here.", url: "docs/synthesis-of-aspirin-lab-manual.pdf", linkText: "Download the lab manual (PDF)", access: "open" },
+        { authors: "Brown, D. B.; Friedman, L. B.", title: "The aspirin project. Laboratory experiments for introductory chemistry", meta: "J. Chem. Educ. 1973, 50 (3), 214–215.", note: "An early report of the one-step salicylic-acid → aspirin synthesis used here.", url: "https://doi.org/10.1021/ed050p214", linkText: "doi.org/10.1021/ed050p214", access: "paywall" },
+        { authors: "PubChem, U.S. National Library of Medicine.", title: "Salicylic acid (338), Acetic anhydride (7918), Aspirin (2244)", meta: "Public-domain compound records and computed 3D conformers.", note: "Free and public. The 3D coordinates come directly from these records via PUG-REST.", url: "https://pubchem.ncbi.nlm.nih.gov/compound/2244", linkText: "pubchem.ncbi.nlm.nih.gov/compound/2244", access: "open" },
+        { authors: "Wikipedia contributors.", title: "Acetylsalicylic acid (aspirin)", meta: "Open reference corroborating the esterification and IR features.", note: "Free and public; a convenient entry point with onward citations.", url: "https://en.wikipedia.org/wiki/Aspirin", linkText: "en.wikipedia.org/wiki/Aspirin", access: "open" },
+        { authors: "Rego, N.; Koes, D.", title: "3Dmol.js: molecular visualization with WebGL", meta: "Bioinformatics 2015, 31 (8), 1322–1324.", note: "The open-source (BSD-3) library rendering the interactive structures.", url: "https://doi.org/10.1093/bioinformatics/btu829", linkText: "doi.org/10.1093/bioinformatics/btu829", access: "open" }
+      ]
+    };
+  </script>
+  <script src="js/structures.js"></script>
+  <script src="https://orgolabs.github.io/shared/lab.js"></script>
+</body>
+</html>
