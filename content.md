@@ -23,7 +23,7 @@ The aspirin-forming step is a **nucleophilic acyl substitution** (an esterificat
 </article>
 <article class="mech-step major-accent"><span class="step-num">2</span>
 <h3>Phenol attacks → ester</h3>
-<p>The <strong>phenol –OH</strong> of salicylic acid attacks that carbonyl carbon. The anhydride breaks, transferring a <strong>–COCH₃ (acetyl)</strong> group to the oxygen and forming the new <strong>ester</strong> bond of aspirin.</p>
+<p>The <strong>phenol –OH</strong> of salicylic acid attacks that carbonyl carbon. The anhydride breaks, transferring a <strong>$\ce{-COCH3}$ (acetyl)</strong> group to the oxygen and forming the new <strong>ester</strong> bond of aspirin.</p>
 </article>
 <article class="mech-step minor-accent"><span class="step-num">3</span>
 <h3>Acetic acid leaves</h3>
@@ -38,7 +38,7 @@ The aspirin-forming step is a **nucleophilic acyl substitution** (an esterificat
 
 <div class="callout">
 <h3>Reading it by IR (how you prove it worked)</h3>
-<p>Salicylic acid shows a broad hydrogen-bonded <strong>O–H band (≈3000–3500 cm⁻¹)</strong> and a single C=O near <strong>1700 cm⁻¹</strong>. <strong>Aspirin loses the broad phenol O–H</strong> (that oxygen is now an ester) and shows <strong>two distinct C=O peaks</strong> — one ester, one carboxylic acid. That change, together with the melting point, is the fingerprint that the acetylation happened.</p>
+<p>Salicylic acid shows a broad hydrogen-bonded <strong>O–H band (≈3000–3500 cm⁻¹)</strong> and a single $\ce{C=O}$ near <strong>1700 cm⁻¹</strong>. <strong>Aspirin loses the broad phenol O–H</strong> (that oxygen is now an ester) and shows <strong>two distinct $\ce{C=O}$ peaks</strong> — one ester, one carboxylic acid. That change, together with the melting point, is the fingerprint that the acetylation happened.</p>
 </div>
 
 | Property | Salicylic acid | Aspirin |
@@ -62,7 +62,7 @@ The one-step **microscale** procedure from Williamson &amp; Masters, *Macroscale
 | Reagent | Amount | Role |
 |---|---|---|
 | Salicylic acid | 138 mg (≈1.0 mmol) | substrate (the phenol/acid) |
-| Acetic anhydride | 0.3 mL = 5 drops (≈0.32 g, 3.2 mmol, ~3 equiv) | acetylating agent (excess) |
+| Acetic anhydride | 0.3 mL = 5 drops (≈0.32 g, 3.2 mmol, ≈3 equiv) | acetylating agent (excess) |
 | 85% phosphoric acid, $\ce{H3PO4}$ | 1 drop | acid catalyst |
 | Deionized water | a few drops | quench &amp; (optional) recrystallize |
 
@@ -72,7 +72,7 @@ A boiling chip goes in the reaction tube with the salicylic acid.
 
 1. Weigh **138 mg salicylic acid** into a reaction tube and add a **boiling chip**.
 2. In the **fume hood**, add **1 small drop of 85% $\ce{H3PO4}$** followed by **0.3 mL (5 drops) acetic anhydride** (caustic vapors — the anhydride also washes the reactants to the bottom of the tube). **Mix thoroughly.**
-3. Heat the tube in a **water bath at ~90 °C for 5 min**.
+3. Heat the tube in a **water bath at ≈90 °C for 5 min**.
 4. Cautiously add **0.2 mL (3 drops) water** to decompose the excess acetic anhydride — this is **exothermic**.
 5. Add a further **0.3 mL (5 drops) water** and let the tube cool **slowly to room temperature**.
 6. If crystals do not form on cooling, add a **seed crystal** or **scratch** the inside of the tube with a glass stirring rod.

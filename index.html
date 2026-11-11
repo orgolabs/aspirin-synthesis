@@ -23,15 +23,15 @@
       content: "content.md",
       viewers: [
         { id: "view-salicylic_acid", key: "salicylic_acid", kind: "start", role: "Starting material", name: "Salicylic acid",
-          iupac: "2-hydroxybenzoic acid", note: "Has a phenol –OH (and a –CO₂H). The phenol is what gets acetylated." },
+          iupac: "2-hydroxybenzoic acid", note: "Has a phenol –OH (and a $\\ce{-CO2H}$). The phenol is what gets acetylated." },
         { id: "view-acetic_anhydride", key: "acetic_anhydride", kind: "start", role: "Reagent", name: "Acetic anhydride",
-          iupac: "ethanoic anhydride", note: "The acetyl (CH₃CO–) donor; far more reactive than acetic acid." },
+          iupac: "ethanoic anhydride", note: "The acetyl ($\\ce{CH3CO-}$) donor; far more reactive than acetic acid." },
         { id: "view-aspirin", key: "aspirin", kind: "major", role: "Product", name: "Aspirin",
-          iupac: "2-acetyloxybenzoic acid", note: "<b>Acetylsalicylic acid.</b> The phenol –OH is now an ester (two C=O groups)." }
+          iupac: "2-acetyloxybenzoic acid", note: "<b>Acetylsalicylic acid.</b> The phenol –OH is now an ester (two $\\ce{C=O}$ groups)." }
       ],
       pathway: [
         { node: { img: "salicylic-acid.png", name: "Salicylic acid", sub: "2-hydroxybenzoic acid" } },
-        { op: { cond: "\\ce{(CH3CO)2O}", sub: "H₃PO₄ · ~90 °C" } },
+        { op: { cond: "\\ce{(CH3CO)2O}", sub: "$\\ce{H3PO4}$ · ≈90 °C" } },
         { node: { img: "aspirin.png", name: "Aspirin", sub: "+ acetic acid", kind: "major" } }
       ],
       pathwayCaption: "A single acetylation: acetic anhydride transfers an acetyl group to the phenol –OH of salicylic acid, giving aspirin (+ acetic acid). The mechanism is below.",
